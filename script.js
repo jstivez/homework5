@@ -63,6 +63,12 @@ function formatTime() {
     }
 }
 
+for (let i = 0; i < 24; i++) {
+    if (row[i] != null) {
+        rowDom[i].value = localStorage.getItem(i);
+    }
+}
+
 // formatTime();
 let time = 0;
 
@@ -75,6 +81,7 @@ function updateTimes() {
     currentHour = moment().format("HH");
     currentHourInt = parseInt(currentHour);
     currMin = moment().format('mm');
+    
     dateDom.innerHTML = currDate;
     if (currMin >= 1) {
         for (let i = 0; i < 24; i++) {
