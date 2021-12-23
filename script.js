@@ -99,3 +99,4 @@ function clearStorage() {
     }
 }
 clearStorage();
+console.log('hi')
